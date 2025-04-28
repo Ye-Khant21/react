@@ -22,7 +22,8 @@ export default function App() {
     body : JSON.stringify(newTask) // py chin tae data
    })
    const data  = await res.json() // response data
-    setTask([...tasks, data]) // add new task to the list
+    // setTask([...tasks, data]) // add new task to the list
+    fetchTask(); //revalidate the task list
     setSending(false);
   }
   const deleteTask = async(id) => {
@@ -49,7 +50,8 @@ export default function App() {
     })
     const data = await res.json()
 
-    setTask(tasks.map((el)=> (el.id ===id? data : el)))
+    // setTask(tasks.map((el)=> (el.id ===id? data : el)))
+    fetchTask(); //revalidate the task list
   }
 
 const  fetchTask = async () => {
