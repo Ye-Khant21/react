@@ -2,9 +2,12 @@ import React from 'react'
 import ProductCart from './ProductCart'
 import Container from './Container'
 import useProductStore from '../store/useProductStore'
+import useCategoryStore from '../store/useCategoryStore'
 
 const ProductSection = () => {
-  const {products} = useProductStore()
+  const {products} = useProductStore();
+  const {categories} = useCategoryStore();
+  const activeCategory = categories.find((category) => category.isActive === true);
   
   return (
     <section className='px-5 mb-5'>
@@ -13,7 +16,7 @@ const ProductSection = () => {
             Available Product List
         </p>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
-            {products.map((product) => <ProductCart key={product.id} product = {product}/>)}</div>
+            {products.filter((el)=> activeCategory.name === "All" ||el.category === activeCategory.name).map((product) => <ProductCart key={product.id} product = {product}/>)}</div>
     </Container>
     </section>
       

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useCartStore from '../store/useCartStore';
 import toast from 'react-hot-toast';
 
-const ProductCard = ({product:{id,title,price,image,rating:{rate}}}) => {
+const ProductCard = ({product:{id,title,price,image,rating:{rate},slug}}) => {
   const navigate = useNavigate();
   const {carts,addCart} = useCartStore()
   const handleAddCart = (event) => {
@@ -24,13 +24,13 @@ const ProductCard = ({product:{id,title,price,image,rating:{rate}}}) => {
   }
 
   const handleAddCartBtn = () => {
-    navigate(`/product-detail/${id}`)
+    navigate(`/product-detail/${slug}`)// use the slug to navigate to the product detail page
   }
 
 
 
   return (
-    <div onClick={handleAddCartBtn} to={`/product-detail/${id}`} className='border border-black p-5 flex flex-col items-start gap-5'>
+    <div onClick={handleAddCartBtn}  className='border border-black p-5 flex flex-col items-start gap-5'>
      <img src={image} alt={title}  className='h-40'/>
      <p className='font-bold line-clamp-2'>
         {title}

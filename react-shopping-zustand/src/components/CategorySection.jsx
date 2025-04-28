@@ -5,7 +5,7 @@ import useCategoryStore from '../store/useCategoryStore';
 
 const CategorySection = () => {
     const title = "Product Categories"
-    const {categories} = useCategoryStore()
+    const {categories} = useCategoryStore();
   return (
     
        <section className='p-5'>
