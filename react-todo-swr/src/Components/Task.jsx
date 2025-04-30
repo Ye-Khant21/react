@@ -9,7 +9,7 @@ export default function Task({job:{id,task,isDone},deleteTask,doneTask}) {
 }
     const handleOnchange = () => {
         // Logic to handle checkbox change
-        doneTask(id)
+        doneTask(id,isDone)
     }
   return (
     <div className='border p-3 rounded-lg mb-2 last:mb-0 flex justify-between items-center'> 

@@ -6,18 +6,13 @@
       "isDone": true
     },
     {
-      "task": "ok par",
-      "isDone": false,
-      "id": 3
-    },
-    {
       "task": "haha",
-      "isDone": false,
+      "isDone": true,
       "id": 4
     },
     {
       "task": "aa",
-      "isDone": false,
+      "isDone": true,
       "id": 5
     },
     {
@@ -26,9 +21,9 @@
       "id": 6
     },
     {
-      "task": "xx",
+      "task": "write assignements",
       "isDone": false,
-      "id": 7
+      "id": 9
     }
   ]
 }
