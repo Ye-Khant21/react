@@ -1,17 +1,17 @@
-import React from 'react'
-import Container from '../components/Container'
-import Breadcrumb from '../components/Breadcrumb'
-import VouncherList from '../components/VouncherList'
+import React from "react";
+import Breadcrumb from "../components/BreadCrumb";
+import VoucherList from "../components/VoucherList";
+import Container from "../components/Container";
 
 const VoucherPage = () => {
   return (
     <section>
       <Container>
-        <Breadcrumb currentPageTitle={'Voucher Page'}></Breadcrumb>
-        <VouncherList /> 
+        <Breadcrumb currentPageTitle={"Voucher Module"} />
+        <VoucherList />
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default VoucherPage
+export default VoucherPage;
