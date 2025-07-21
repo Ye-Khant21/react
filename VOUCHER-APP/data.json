@@ -53,64 +53,9 @@
       "product_name": "Custom Web Application Development",
       "price": 200,
       "created_at": "2024-09-06T09:45:00Z"
-    },
-    {
-      "id": 10,
-      "product_name": "UI/UX Design Consulting",
-      "price": 700,
-      "created_at": "2024-09-05T15:00:00Z"
     }
   ],
   "vouchers": [
-    {
-      "voucher_id": "INV-20240930-7345",
-      "customer_name": "Su Su",
-      "customer_email": "su@gmail.com",
-      "sale_date": "2024-09-30",
-      "all_correct": true,
-      "records": [
-        {
-          "id": 1727705985046,
-          "product": {
-            "id": 2,
-            "product_name": "Custom Website Design",
-            "price": 1200,
-            "created_at": "2024-09-13T09:00:00Z"
-          },
-          "quantity": "3",
-          "cost": 3600,
-          "created_at": "2024-09-30T14:19:45.046Z"
-        },
-        {
-          "id": 1727705991205,
-          "product": {
-            "id": 6,
-            "product_name": "Website Maintenance Plan",
-            "price": 200,
-            "created_at": "2024-09-09T08:50:25Z"
-          },
-          "quantity": "2",
-          "cost": 400,
-          "created_at": "2024-09-30T14:19:51.205Z"
-        },
-        {
-          "id": 1727705995808,
-          "product": {
-            "id": 9,
-            "product_name": "Custom Web Application Development",
-            "price": 2000,
-            "created_at": "2024-09-06T09:45:00Z"
-          },
-          "quantity": "2",
-          "cost": 4000,
-          "created_at": "2024-09-30T14:19:55.808Z"
-        }
-      ],
-      "total": 8000,
-      "tax": 560,
-      "netTotal": 8560,
-      "id": 2
-    },
     {
       "voucher_id": "INV-20240930-1297",
       "customer_name": "Aung Aung",
@@ -185,32 +130,6 @@
       "tax": 42.00000000000001,
       "netTotal": 642,
       "id": 4
-    },
-    {
-      "voucher_id": "INV-20240930-9714",
-      "customer_name": "kyaw kayw",
-      "customer_email": "kyaw@gmail.com",
-      "sale_date": "2024-09-30",
-      "redirect_to_detail": true,
-      "all_correct": true,
-      "records": [
-        {
-          "id": 1727709430917,
-          "product": {
-            "id": 4,
-            "product_name": "Responsive Website Development",
-            "price": 800,
-            "created_at": "2024-09-11T10:45:00Z"
-          },
-          "quantity": "5",
-          "cost": 4000,
-          "created_at": "2024-09-30T15:17:10.917Z"
-        }
-      ],
-      "total": 4000,
-      "tax": 280,
-      "netTotal": 4280,
-      "id": 5
     },
     {
       "voucher_id": "INV-20240930-4754",
@@ -299,6 +218,58 @@
       "tax": 420.00000000000006,
       "netTotal": 6420,
       "id": 7
+    },
+    {
+      "voucher_id": "INV-20250718-5092",
+      "customer_name": "ye khant",
+      "customer_email": "yekhant791@gmail.com",
+      "sale_date": "2025-07-18",
+      "redirect_to_detail": true,
+      "all_correct": true,
+      "records": [
+        {
+          "id": 1752821055099,
+          "product": {
+            "id": 1,
+            "product_name": "Performance Optimization Service",
+            "price": 200,
+            "created_at": "2024-09-14T12:30:45Z"
+          },
+          "quantity": 18,
+          "cost": 3600,
+          "created_at": "2025-07-18T06:44:15.099Z"
+        }
+      ],
+      "total": 3600,
+      "tax": 252.00000000000003,
+      "netTotal": 3852,
+      "id": 8
+    },
+    {
+      "voucher_id": "INV-20250721-5853",
+      "customer_name": "ye khant1",
+      "customer_email": "yekhant741@gmail.com",
+      "sale_date": "2025-07-21",
+      "redirect_to_detail": true,
+      "all_correct": true,
+      "records": [
+        {
+          "id": 1753118716731,
+          "product": {
+            "id": 2,
+            "product_name": "Custom Website Design",
+            "price": 1200,
+            "created_at": "2024-09-13T09:00:00Z"
+          },
+          "quantity": "12",
+          "cost": 14400,
+          "created_at": "2025-07-21T17:25:16.731Z"
+        }
+      ],
+      "total": 14400,
+      "tax": 1008.0000000000001,
+      "netTotal": 15408,
+      "id": 9
     }
   ]
 }

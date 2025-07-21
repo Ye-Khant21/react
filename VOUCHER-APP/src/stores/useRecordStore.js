@@ -7,6 +7,7 @@ const useRecordStore = create((set) => ({
   },
   removeRecord: (id) => {
     set((state) => ({
+
       records: state.records.filter((record) => record.id !== id),
     }));
   },
