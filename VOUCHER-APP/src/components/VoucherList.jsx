@@ -11,21 +11,34 @@ import {
 import { Link } from "react-router-dom";
 import VoucherListRow from "./VoucherListRow";
 import useSWR from "swr";
+import { lineSpinner } from 'ldrs'
+lineSpinner.register()
+
+// Default values shown
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const VoucherList = () => {
   const [search, setSearch] = useState("");
-
   const searchInput = useRef("");
-  console.log(searchInput);
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+  const handleClearSearch = () => {
+    setSearch("");
+    searchInput.current.value = "";
+  };
 
-  const { data, isLoading, error } = useSWR(
-    
-    import.meta.env.VITE_API_URL + `/vouchers?search=${search}`,
+ 
+
+   const { data, isLoading, error } = useSWR(
+    search
+      ? `${import.meta.env.VITE_API_URL}/vouchers?voucher_id_like=${search}`
+      : `${import.meta.env.VITE_API_URL}/vouchers`,
     fetcher
-
   );
+
 
   // console.log(search);
 
@@ -49,6 +62,7 @@ const VoucherList = () => {
             </div>
             <input
               type="text"
+              onChange={handleSearch}
               ref={searchInput}
               
               className="bg-gray-50 border border-gray-300 text-stone-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -108,7 +122,15 @@ const VoucherList = () => {
             {isLoading ? (
               <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 hidden last:table-row">
                 <td colSpan={5} className="px-6 py-4 text-center">
-                  Loading ...
+                  <div className="flex justify-center items-center gap-2">
+                    <l-line-spinner
+                    size="20"
+                    stroke="3"
+                     speed="1" 
+                  color="black" 
+                   ></l-line-spinner>
+                    Loading...
+                  </div>
                 </td>
               </tr>
             ) : (
